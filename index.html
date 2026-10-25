@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Task</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <main class="todo-container">
+        <header class="header">
+            <h1>My Tasks</h1>
+            <p>Each day has each day's task,but don't be procastinating!</p>
+        </header>
+
+        <!--Add a new task-->
+        <form id="task-form" class="task-form">
+            <input type="text" 
+            id="task-input" 
+            placeholder="What tasks to be done?"
+            maxlength="200"
+            aria-label="New task"
+            required
+            >
+            <button type="submit" class="add-btn">Add</button>
+        </form>
+        <!--Task list-->
+        <ul id="task-list" class="task-list"></ul>
+
+        <!--Filter tasks-->
+        <footer class="task-footer">
+            <span id="task-count" class="task-count">
+                0 tasks left
+            </span>
+
+            <div class="filter-buttons">
+                <button type="button" class="filter-btn active"
+                data-filter="all">All</button>
+                <button type="button" class="filter-btn"
+                data-filter="active">Incomplete</button>
+                <button type="button" class="filter-btn"
+                data-filter="completed">Completed</button>
+            </div>
+        </footer>
+    </main>
+    
+</body>
+</html>
